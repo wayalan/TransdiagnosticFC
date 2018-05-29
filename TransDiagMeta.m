@@ -111,10 +111,4 @@ end
     Site.All_2=find(iniMetaResult(:,5)<mcP(2));
 % PT3 vs HC
     Site.All_3=find(iniMetaResult(:,6)<mcP(3));
-       
-
-% FCr.CoD=ResFC(:,1:size(FC.CoD,2));
-% FCr.uniSite1=ResFC(:,size(FC.CoD,2)+1:size(FC.CoD,2)+size(FC.uniSite1,2));
-% FCr.uniSite2=ResFC(:,size(FC.CoD,2)+size(FC.uniSite1,2)+1:size(FC.CoD,2)+size(FC.uniSite1,2)+size(FC.uniSite2,2));
-% FCr.uniSite3=ResFC(:,size(FC.CoD,2)+size(FC.uniSite1,2)+size(FC.uniSite2,2)+1:end);
-
+      
