@@ -1,14 +1,15 @@
 % fMRIDataSet is a structure for fMRI data and covariate data at each site
 % together with the site name and covariates names at each site
-% fMRIDataSet{i}.normal, fMRIDataSet{i}.id_n, fMRIDataSet{i}.patient, fMRIDataSet{i}.id_p, fMRIDataSet{i}.site_name,...
-%             fMRIDataSet{i}.behaviours(:,fMRIDataSet{i}.index_beh), fMRIDataSet{i}.covariate_n, fMRIDataSet{i}.covarate_p, ...
-%             [fMRIDataSet{i}.covarate_p, fMRIDataSet{i}.behaviours(:,fMRIDataSet{i}.index_cov)]
+% fMRIDataSet{i}.normal, fMRIDataSet{i}.patient: Time Series of the ROIs of each subject 
+% fMRIDataSet{i}.id_n, fMRIDataSet{i}.id_p: Logical array, identify inclusion criteria 
+% fMRIDataSet{i}.site_name: Name of each pair of groups
+% fMRIDataSet{i}.covariate_n, fMRIDataSet{i}.covarate_p: covariates when doing group comparison 
 
 %% This is the example for transdiagnostic analysis between three groups
 
 %% 1) 
 %% identify the those FCs with survived the Bonferonni correction by meta-analysis on many datasets
-load fMRIDataSet.mat
+load fMRIDataSet_n20example.mat %Example file for 20 HC/DEP/BIP/SCZ
 
 %% Multiple Comparison Correction
 mcc=2; % 1:Bonferroni, 2:FDR, 3:uncorrected
